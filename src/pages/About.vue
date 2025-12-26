@@ -1,8 +1,10 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import Card from '@/components/Card.vue'
+</script>
 
 <template class="template">
   <div class="container">
-    <div class="card">
+    <Card direction="row" gap="50px" justify-content="space-between" margin-top="50px">
       <div class="description">
         <h1>Sobre nós</h1>
         <p>
@@ -22,7 +24,7 @@
         <img alt="Donos da cachaçaria" src="../../assets/images/owners.jpg" />
         <img alt="Interior da cachaçaria" src="../../assets/images/store.jpg" />
       </div>
-    </div>
+    </Card>
   </div>
 </template>
 
@@ -35,9 +37,8 @@
 }
 
 .card {
-  padding: 16px;
+  padding: 42px;
   max-width: 50vw;
-  max-height: 75vh;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
   display: flex;
@@ -50,22 +51,25 @@ h1 {
   margin-top: 12px;
   color: rgb(78, 46, 27);
   font-weight: bold;
-  font-size: 24px;
+  font-size: 32px;
 }
 
 p {
-  margin-top: 12px;
+  margin-top: 32px;
+  line-height: 1.5;
+  text-align: justify;
   color: rgb(102, 68, 34);
 }
 
 .images {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 32px;
 }
 
 img {
-  width: 100px;
+  width: 450px;
   border-radius: 12px;
 }
 </style>
