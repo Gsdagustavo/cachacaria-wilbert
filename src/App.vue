@@ -1,11 +1,25 @@
-<script setup lang="ts"></script>
+<script lang="ts" setup>
+import Header from '@/components/Header.vue'
+</script>
 
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+  <main class="app">
+    <Header />
+    <router-view />
+  </main>
 </template>
 
-<style scoped></style>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font:
+    normal 1rem 'JetBrains Mono Regular',
+    monospace;
+}
+
+.app {
+  min-height: 100vh;
+}
+</style>
